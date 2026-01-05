@@ -1,5 +1,5 @@
 """
-Kalshi vs Polymarket Market Comparison Tool
+MarketParity - Market Comparison Tool
 Main Streamlit Application
 """
 import streamlit as st
@@ -14,8 +14,8 @@ from market_matcher import MarketMatcher
 
 # Page configuration
 st.set_page_config(
-    page_title="Kalshi vs Polymarket Comparison",
-    page_icon="📊",
+    page_title="MarketParity - Market Comparison",
+    page_icon="⚖️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -458,7 +458,7 @@ def main():
             margin: 0 0 16px 0;
             font-weight: 800;
         ">
-            📊 Kalshi vs Polymarket
+            ⚖️ MarketParity
         </h1>
         <p style="color: #CBD5E1; font-size: 1.2em; margin: 0; line-height: 1.6;">
             Compare prediction markets side-by-side • Find arbitrage opportunities • Trade with one click

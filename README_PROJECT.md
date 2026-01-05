@@ -1,6 +1,6 @@
-# Kalshi vs Polymarket Market Comparison Tool
+# MarketParity
 
-A comprehensive web application that compares prediction markets between **Kalshi** (CFTC-regulated US platform) and **Polymarket** (decentralized global platform). Find arbitrage opportunities, compare prices, and get direct links to trade.
+A comprehensive market comparison tool that analyzes prediction markets between **Kalshi** (CFTC-regulated US platform) and **Polymarket** (decentralized global platform). Find arbitrage opportunities, compare prices, and get direct links to trade.
 
 ## 🎯 Features
 
