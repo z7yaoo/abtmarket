@@ -577,6 +577,22 @@ def main():
         )
         st.sidebar.metric("Arbitrage Opportunities", arbitrage_count)
 
+        # Debug Info
+        with st.sidebar.expander("🔍 Debug Info"):
+            st.caption(f"**Markets Fetched:**")
+            st.caption(f"• Kalshi: {kalshi_count} markets")
+            st.caption(f"• Polymarket: {poly_count} markets")
+            st.caption(f"")
+            st.caption(f"**Matching Results:**")
+            st.caption(f"• Matches found: {len(matches)}")
+            match_rate = (len(matches) / kalshi_count * 100) if kalshi_count > 0 else 0
+            st.caption(f"• Match rate: {match_rate:.1f}%")
+            st.caption(f"• Similarity threshold: {min_similarity*100:.0f}%")
+            st.caption(f"")
+            st.caption(f"**Tip:** ถ้ามี match น้อยเกินไป ลอง:")
+            st.caption(f"• ลด Similarity threshold")
+            st.caption(f"• ปิด Arbitrage Only filter")
+
         # Last updated
         st.sidebar.caption(f"Last updated: {datetime.now().strftime('%H:%M:%S')}")
 
