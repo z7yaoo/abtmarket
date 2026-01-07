@@ -530,7 +530,7 @@ def main():
         "Minimum Match Score",
         min_value=0.1,
         max_value=0.9,
-        value=0.5,
+        value=0.3,
         step=0.1,
         help="Higher values show only more similar matches (recommended: 0.5-0.7 for accurate arbitrage)"
     )

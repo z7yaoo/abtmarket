@@ -467,12 +467,12 @@ class MarketMatcher:
         # Combine scores
         final_score = min(1.0, base_score + proper_boost + category_boost)
 
-        # PENALTY: If no topics found, heavily penalize unless score is very high
+        # PENALTY: If no topics found, apply moderate penalty unless score is very high
         # This prevents "Trump does X" from matching "Trump does Y"
         if not topics1 or not topics2:
-            # Without topics, require near-perfect match (85%+ word overlap)
-            if final_score < 0.85:
-                final_score = final_score * 0.3  # Severe penalty
+            # Without topics, require high match (75%+ word overlap)
+            if final_score < 0.75:
+                final_score = final_score * 0.6  # Moderate penalty (was 0.3)
 
         return final_score
 
