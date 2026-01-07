@@ -26,6 +26,21 @@ st.markdown("""
     /* Import Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
+    /* Hide Streamlit Header/Toolbar */
+    header[data-testid="stHeader"] {
+        display: none !important;
+    }
+
+    /* Hide Deploy button */
+    button[kind="header"] {
+        display: none !important;
+    }
+
+    /* Hide top padding */
+    .main .block-container {
+        padding-top: 2rem !important;
+    }
+
     /* Global Styles - Dark Mode */
     .stApp {
         background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
