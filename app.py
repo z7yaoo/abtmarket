@@ -693,10 +693,6 @@ def main():
     - **Kalshi**: CFTC-regulated, USD, US-only, centralized
     - **Polymarket**: Decentralized, USDC, global (blocks US IPs)
 
-    **Resources:**
-    - [Kalshi API Docs](https://docs.kalshi.com)
-    - [Polymarket API Docs](https://docs.polymarket.com)
-
     **How Arbitrage Works:**
     When the same event has different prices on different platforms,
     you can potentially profit by buying low on one and selling high on the other.
