@@ -26,19 +26,40 @@ st.markdown("""
     /* Import Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
-    /* Hide Streamlit Header/Toolbar */
-    header[data-testid="stHeader"] {
+    /* Hide Streamlit Header/Toolbar - Multiple selectors for compatibility */
+    header[data-testid="stHeader"],
+    div[data-testid="stToolbar"],
+    div[data-testid="stDecoration"],
+    div[data-testid="stStatusWidget"],
+    #MainMenu,
+    header,
+    footer {
+        visibility: hidden !important;
+        height: 0 !important;
+        position: fixed !important;
+        top: -100px !important;
+    }
+
+    /* Force hide via multiple methods */
+    iframe[title="streamlit_option_menu.nav_item"] {
         display: none !important;
     }
 
-    /* Hide Deploy button */
-    button[kind="header"] {
-        display: none !important;
-    }
-
-    /* Hide top padding */
+    /* Reduce top padding */
     .main .block-container {
-        padding-top: 2rem !important;
+        padding-top: 1rem !important;
+        max-width: 100% !important;
+    }
+
+    /* Remove Streamlit branding */
+    footer {
+        visibility: hidden !important;
+    }
+
+    footer:after {
+        content: '';
+        visibility: hidden;
+        display: block;
     }
 
     /* Global Styles - Dark Mode */
